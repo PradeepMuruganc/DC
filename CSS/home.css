@@ -14,7 +14,7 @@
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    font-family: candora;
+    font-family: candara;
 
 }
 
@@ -140,6 +140,7 @@ input {
     box-shadow: 0px 2px 4px 0px #00000029;
     position: sticky;
     top: 0;
+    z-index: 999999;
 
 }
 
@@ -302,7 +303,7 @@ input {
     background-color: #FE302F;
     width: Fixed (92px)px;
     height: Fixed (42px)px;
-    padding: 8px 16px 8px 16px;
+    padding: 2% 4%;
     gap: 8px;
     border-radius: 12px;
     opacity: 0px;
@@ -325,90 +326,145 @@ input {
     opacity: 0px;
     border: none;
     color: white;
-    padding: .5%;
+    padding: .7%;
     justify-content: center;
     position: absolute;
     right: 60px;
-    position: fixed; 
+    position: fixed;
     bottom: 50px;
-    .contact{
+
+    .contact {
         padding-top: 4px;
     }
 }
+
 .icon-box {
-    
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
+
+    --grid-size: 300px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,
+            minmax(min(var(--grid-size), 100%), 1fr));
+    gap: 1.5rem;
+    padding: 0px 0px 32px 0px;
 }
+
 .icon-box .icon {
     border: #D7DBE0 1px solid;
     padding: 20px;
-    width: 350px;
     border-radius: 12px;
     box-shadow: 0px 4px 8px 0px #00000014;
-
-}
-.icon-box .icon .icon-primary{
-    display: flex;
-}
-.boxes h2{
-font-size: 30px;
+    h6{
+        font-family: Candara;
+font-size: 24px;
 font-weight: 700;
-line-height: 36.62px;
-letter-spacing: 0.03em;
-}
-.boxes{
-    padding: 70px 60px 57px 60px;
-}
-.approach-box{
-    display: flex;
-    justify-content: space-between;
-    padding: 32px 164px 70px 164px;
-    gap: 70px;
-}
-.approach {
-    border: #D7DBE0 1px solid;
-    box-shadow: 0px 4px 8px 0px #00000014;
-    width:521px;
-gap: 28px;
-border-radius:15px;
-border: 1px 0px 0px 0px;
-opacity: 0px;
-}
-.approach-box .approach p{
-    padding: 6px 30.5px 28px 30.5px;
-}
-.approach-box .approach h4{
-    padding: 28px 30.5px 0px 30.5px;
-}
-.a-box{
-    background-color: #F3F2FD;
-    padding-top: 70px;
-    h2{
-        padding: 70px 60px 32px 60px;
-font-size: 30px;
-font-weight: 700;
-line-height: 36.62px;
-letter-spacing: 0.03em;
+line-height: 29.3px;
 text-align: left;
 
     }
-}
-.team-con{
-    background-color: #F3F2FD;
-    h2{
-        padding: 70px 60px 32px 60px;
-font-size: 30px;
-font-weight: 700;
-line-height: 36.62px;
-letter-spacing: 0.03em;
+    p{
+        font-family: Candara;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
 text-align: left;
+color: #0000009E;
+
+    }
+
+}
+
+.icon-box .icon .icon-primary {
+    display: flex;
+    padding-bottom: 10px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+
+    img {
+        gap: 0px;
+        opacity: 0px;
+        object-position: contain;
+    }
+}
+
+.boxes h2 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36.62px;
+    letter-spacing: 0.03em;
+    padding-bottom: 32px;
+}
+
+.boxes {
+    padding: 70px 60px 57px 60px;
+}
+
+.approach-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 60px 70px 60px;
+    gap: 70px;
+}
+
+.approach {
+    border: #D7DBE0 1px solid;
+    box-shadow: 0px 4px 8px 0px #00000014;
+    width: 580px;
+    gap: 28px;
+    border-radius: 15px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+}
+
+.approach-box .approach p {
+    padding: 6px 30.5px 28px 30.5px;
+    font-family: Candara;
+font-size: 20px;
+font-weight: 400;
+line-height: 30px;
+text-align: left;
+
+}
+.approach-box .approach img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.approach-box .approach h4 {
+    padding: 28px 30.5px 0px 30.5px;
+    font-family: Candara;
+font-size: 24px;
+font-weight: 700;
+line-height: 29.3px;
+text-align: left;
+
+}
+
+.a-box {
+    background-color: #F3F2FD;
+    padding-top: 70px;
+
+    h2 {
+        padding: 70px 60px 32px 60px;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 36.62px;
+        letter-spacing: 0.03em;
+        text-align: left;
+
+    }
+}
+
+.team-con {
+    background-color: #F3F2FD;
+
+    h2 {
+        padding: 70px 60px 32px 60px;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 36.62px;
+        letter-spacing: 0.03em;
+        text-align: left;
 
     }
 }
@@ -416,13 +472,15 @@ text-align: left;
 .container-2 {
     display: flex;
     padding: 0px 60px 70px 60px;
+    gap: 42px;
 }
+
 .container-2 .left-2 {
     width: 650px;
-height: 293px;
-gap: 0px;
-border-radius: 12px 0px 0px 0px;
-opacity: 0px;
+    height: 293px;
+    gap: 0px;
+    border-radius: 12px 0px 0px 0px;
+    opacity: 0px;
 
     padding-right: 42px;
 }
@@ -442,66 +500,131 @@ opacity: 0px;
     line-height: 28px;
     text-align: left;
     color: #000000CC;
-    
+
 
 }
 
-.container-2 .right-2{
-    padding: 55.5px 15px 55.5px 42px;
-    justify-content: center;
+.container-2 .right-2 {
+    align-items: center;
+
 }
-.digital-main{
+
+.digital-main {
     background-image: url("./asset/images/bg.png");
 }
-.digital-age{
+
+.digital-age {
     padding: 110px 160px 92px 60px;
     background-image: url(../Assets/images/bg.png);
     color: white;
     background-repeat: no-repeat;
 }
 
-.digital-age .p1{
-font-size: 40px;
-font-weight: 700;
-line-height: 54px;
-text-align: left;
-padding-bottom: 10px;
+.digital-age .p1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 54px;
+    text-align: left;
+    padding-bottom: 10px;
 }
-.digital-age .p2{
-font-size: 20px;
-font-weight: 400;
-line-height: 30px;
-text-align: left;
-padding-bottom: 30px;
+
+.digital-age .p2 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    padding-bottom: 30px;
 
 }
-.digital-age button{
+
+.digital-age button {
     background-color: #FE302F;
     width: Fixed (92px)px;
     height: Fixed (42px)px;
-    padding: 8px 16px 8px 16px;
+    padding: 1.2% 3%;
     gap: 8px;
     border-radius: 12px;
     opacity: 0px;
     border: none;
     color: white;
     margin-top: 30px;
+    justify-content: center;
 }
-
-.diff .right-3 .card1{
-    display: inline;
-    border: 5px solid #EFEEFC;
-    border-radius: 50%;
-    color: #1B1464;
-font-size: 24px;
+.differentiators .topic{
+font-size: 28px;
 font-weight: 700;
 line-height: 42px;
 letter-spacing: 0.03em;
 text-align: left;
-height
+padding-left: 70px;
+padding-top: 71px;
 
 }
-.diff{
+.differentiators .right-3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.diff .right-3 .card1,.diff .right-3 .card2,.diff .right-3 .card3,.diff .right-3 .card4,.diff .right-3 .card5 {
+    display: flex;
+    border: 10px solid #EFEEFC;
+    border-radius: 50%;
+    color: #1B1464;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 42px;
+    letter-spacing: 0.03em;
+    /* text-align: left; */
+    /* padding-right: 24px; */
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    background-color: white;
+    font-family: lato;
+
+
+
+}
+
+.diff {
     display: flex;
     justify-content: center;
+    gap: 63px;
+    padding: 32.5px 70px 63px 70px;
+}
+
+.c1, .c2, .c3, .c4, .c5 {
+    display: flex;
+    padding-bottom: 21px;
+    gap: 24px;
+
+}
+
+.c1 .p1,.c2 .p1, .c3 .p1,.c4 .p1,.c5 .p1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.3px;
+    text-align: left;
+    color: black;
+    padding-bottom: 4px;
+
+}
+
+.c1 .p2,.c2 .p2, .c3 .p2, .c4 .p2, .c5 .p2 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #0000009E;
+
+}
+.diff .right-3 .line{
+    border: 1.9px dashed #1B1464;
+    transform: rotate(90deg);
+    position:relative;
+    top: 31px;
+
 }
